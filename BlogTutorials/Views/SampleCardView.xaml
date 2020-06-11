@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="BlogTutorials.Views.SampleCardView">
+    <ContentView.Content>
+        <Frame HasShadow="True" BackgroundColor="White" Padding="10"
+                BorderColor="LightGray" CornerRadius="2" Margin="20,5">
+            <StackLayout>
+                <Label Text="Item Name" FontAttributes="Bold" FontSize="18"
+                        TextColor="Black" />
+                <Label Text="Item Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        FontSize="16" TextColor="DarkSlateGray" />
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

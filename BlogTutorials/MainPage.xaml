@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:BlogTutorials.Views" mc:Ignorable="d"
+        xmlns:behaviors="clr-namespace:BlogTutorials.Behaviors"
+        x:Class="BlogTutorials.MainPage">
+    <StackLayout Spacing="0">
+        <!-- Header -->
+        <StackLayout BackgroundColor="#04B4AE" HeightRequest="60">
+            <Label HorizontalOptions="Center" TextColor="White" FontSize="40"
+                    TranslationY="45" Text="Page Header"
+                    VerticalOptions="CenterAndExpand">
+                <Label.Behaviors>
+                    <behaviors:ScaleForScrollViewBehavior ScrollViewReference="{x:Reference svContent}"
+                            EndScale="0.5" ScrollEnd="80" />
+                    <behaviors:TranslateForScrollViewBehavior ScrollViewReference="{x:Reference svContent}"
+                            EndTranslation="0,0" ScrollStart="42" ScrollEnd="85" />
+                </Label.Behaviors>
+            </Label>
+        </StackLayout>
+        <!-- Page Content -->
+        <ScrollView BackgroundColor="#04B4AE" x:Name="svContent">
+            <StackLayout Padding="0,30,0,0">
+                <Label HorizontalOptions="Center" TextColor="White"
+                        FontSize="40" Text="Page Header">
+                    <Label.Behaviors>
+                        <behaviors:ScaleForScrollViewBehavior ScrollViewReference="{x:Reference svContent}"
+                                EndScale="0.5" ScrollEnd="80" />
+                    </Label.Behaviors>
+                </Label>
+                <StackLayout Margin="0,40,0,0" BackgroundColor="#FAFAFA">
+                    <!-- Use some arbitrary views to fill the space. -->
+                    <views:SampleCardView />
+                    <views:SampleCardView />
+                    <views:SampleCardView />
+                    <views:SampleCardView />
+                    <views:SampleCardView />
+                    <views:SampleCardView />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
