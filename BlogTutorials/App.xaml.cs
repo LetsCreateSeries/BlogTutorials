@@ -1,4 +1,7 @@
 ﻿using System;
+using BlogTutorials.PageModels;
+using BlogTutorials.PageModels.Base;
+using BlogTutorials.Services.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,12 +12,11 @@ namespace BlogTutorials
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
         }
 
         protected override void OnStart()
         {
+            PageModelLocator.Resolve<INavigationService>().NavigateToAsync<MainPageModel>(null, true);
         }
 
         protected override void OnSleep()

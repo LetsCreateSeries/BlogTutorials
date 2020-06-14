@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        HorizontalOptions="Center" VerticalOptions="Center"
+        xmlns:views="clr-namespace:BlogTutorials.Views"
+        xmlns:controls="clr-namespace:BlogTutorials.Controls"
+        x:Class="BlogTutorials.Views.RadialGauge">
+    <ContentView.Content>
+        <controls:OvalFrame HorizontalOptions="FillAndExpand" HasShadow="True"
+                VerticalOptions="FillAndExpand" BackgroundColor="White"
+                Padding="0">
+            <Grid>
+                <views:CirclePathView MinValue="{Binding MinValue}"
+                        MaxValue="{Binding MaxValue}"
+                        CurrentProgress="{Binding CurrentProgress}" />
+                <StackLayout>
+                    <Label HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="EndAndExpand" FontSize="50"
+                            FontAttributes="Bold"
+                            Text="{Binding CurrentProgress, StringFormat='{}{0}'}"
+                            TextColor="Black" />
+                    <Label HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="StartAndExpand" FontSize="14"
+                            Text="{Binding Detail}" TextColor="DarkSlateGray" />
+                </StackLayout>
+            </Grid>
+        </controls:OvalFrame>
+    </ContentView.Content>
+</ContentView>

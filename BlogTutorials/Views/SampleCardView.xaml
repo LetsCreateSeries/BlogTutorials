@@ -5,11 +5,14 @@
     <ContentView.Content>
         <Frame HasShadow="True" BackgroundColor="White" Padding="10"
                 BorderColor="LightGray" CornerRadius="2" Margin="20,5">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Command}" />
+            </Frame.GestureRecognizers>
             <StackLayout>
-                <Label Text="Item Name" FontAttributes="Bold" FontSize="18"
-                        TextColor="Black" />
-                <Label Text="Item Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        FontSize="16" TextColor="DarkSlateGray" />
+                <Label Text="{Binding Title}" FontAttributes="Bold"
+                        FontSize="18" TextColor="Black" />
+                <Label Text="{Binding Description}" FontSize="16"
+                        TextColor="DarkSlateGray" />
             </StackLayout>
         </Frame>
     </ContentView.Content>

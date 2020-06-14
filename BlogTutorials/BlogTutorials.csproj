@@ -18,5 +18,16 @@
     <Folder Include="Views\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Behaviors\Base\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Pages\" />
+    <Folder Include="PageModels\" />
+    <Folder Include="PageModels\Base\" />
+    <Folder Include="TinyIoC\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Navigation\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\RadialGauge\RadialGauge.xaml.cs" />
   </ItemGroup>
 </Project>

@@ -31,13 +31,10 @@
                     </Label.Behaviors>
                 </Label>
                 <StackLayout Margin="0,40,0,0" BackgroundColor="#FAFAFA">
-                    <!-- Use some arbitrary views to fill the space. -->
-                    <views:SampleCardView />
-                    <views:SampleCardView />
-                    <views:SampleCardView />
-                    <views:SampleCardView />
-                    <views:SampleCardView />
-                    <views:SampleCardView />
+                    <views:SampleCardView BindingContext="{Binding RadialGaugeRow}" />
+                    <BoxView HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start" HeightRequest="800"
+                            BackgroundColor="AliceBlue" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>
