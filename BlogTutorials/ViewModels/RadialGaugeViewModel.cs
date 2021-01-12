@@ -12,22 +12,22 @@ namespace BlogTutorials.ViewModels
             set => SetProperty(ref _detail, value);
         }
 
-        private double _minValue;
-        public double MinValue
+        private int _minValue;
+        public int MinValue
         {
             get => _minValue;
             set => SetProperty(ref _minValue, value);
         }
 
-        private double _maxValue;
-        public double MaxValue
+        private int _maxValue;
+        public int MaxValue
         {
             get => _maxValue;
             set => SetProperty(ref _maxValue, value);
         }
 
-        private double _currentProgress;
-        public double CurrentProgress
+        private int _currentProgress;
+        public int CurrentProgress
         {
             get => _currentProgress;
             set => SetProperty(ref _currentProgress, value);

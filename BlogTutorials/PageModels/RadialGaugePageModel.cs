@@ -24,21 +24,5 @@ namespace BlogTutorials.PageModels
                 Detail = "Completed"
             };
         }
-
-        public override async Task InitializeAsync(object navigationData = null)
-        {
-            await Task.Delay(5000);
-            var initialDelay = 300;
-            for (var i = 0; i < 30; i++)
-            {
-                RadialGaugeViewModel.CurrentProgress++;
-
-                if (initialDelay - 20 > 30)
-                    initialDelay -= 20;
-
-                await Task.Delay(initialDelay);
-            }
-            await base.InitializeAsync(navigationData);
-        }
     }
 }

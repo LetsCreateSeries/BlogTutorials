@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:views="clr-namespace:BlogTutorials.Views"
-        x:Class="BlogTutorials.Pages.RadialGaugePage">
+        xmlns:views="clr-namespace:BlogTutorials.Views" Title="Radial Gauge"
+        BackgroundColor="#FAFAFA" x:Class="BlogTutorials.Pages.RadialGaugePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="This is a Radial Gauge" />
             <views:RadialGauge WidthRequest="200" HeightRequest="200"
+                    Margin="20,40,20,0"
+                    BindingContext="{Binding RadialGaugeViewModel}" />
+            <Slider Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+                    Value="{Binding CurrentProgress}" Margin="20"
                     BindingContext="{Binding RadialGaugeViewModel}" />
         </StackLayout>
     </ContentPage.Content>
