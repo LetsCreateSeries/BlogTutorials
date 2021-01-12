@@ -21,6 +21,7 @@ namespace BlogTutorials.PageModels.Base
 
             RegisterPageAndPageModel<MainPageModel, MainPage>();
             RegisterPageAndPageModel<RadialGaugePageModel, RadialGaugePage>();
+            RegisterPageAndPageModel<AnimatedEntryPageModel, AnimatedEntryPage>();
         }
 
         public static Page CreatePageFor<TPageModel>()

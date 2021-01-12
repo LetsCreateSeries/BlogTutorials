@@ -32,6 +32,7 @@
                 </Label>
                 <StackLayout Margin="0,40,0,0" BackgroundColor="#FAFAFA">
                     <views:SampleCardView BindingContext="{Binding RadialGaugeRow}" />
+                    <views:SampleCardView BindingContext="{Binding AnimatedEntryRow}" />
                     <BoxView HorizontalOptions="FillAndExpand"
                             VerticalOptions="Start" HeightRequest="800"
                             BackgroundColor="AliceBlue" />

@@ -1,15 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="BlogTutorials.Pages.AnimatedEntryPage">
+        x:Class="BlogTutorials.Pages.AnimatedEntryPage"
+        xmlns:views="clr-namespace:BlogTutorials.Views">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
             <StackLayout.Background>
                 <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="Blue" Offset="0.1" />
-                    <GradientStop Color="Purple" Offset="1.0" />
+                    <GradientStop Color="DarkSlateBlue" Offset="0" />
+                    <GradientStop Color="SlateBlue" Offset="1.0" />
                 </LinearGradientBrush>
             </StackLayout.Background>
+            <views:AnimatedEntryView Margin="20" />
+            <views:AnimatedEntryView Margin="20" />
+            <views:AnimatedEntryView Margin="20" />
+            <views:AnimatedEntryView Margin="20" />
+            <views:AnimatedEntryView Margin="20" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

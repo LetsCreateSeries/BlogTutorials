@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:controls="clr-namespace:BlogTutorials.Controls"
+        x:Class="BlogTutorials.Views.AnimatedEntryView">
+    <ContentView.Content>
+        <Grid RowDefinitions="40,2" RowSpacing="0">
+            <controls:PlainEntry Placeholder="animated entry"
+                    PlaceholderColor="White" BackgroundColor="Transparent"
+                    x:Name="entInput" Opacity="0.5" />
+            <BoxView x:Name="bvBackground" BackgroundColor="White"
+                    HeightRequest="1" Opacity="0.25"
+                    HorizontalOptions="FillAndExpand" Grid.Row="1" />
+            <BoxView x:Name="bvGradient" HeightRequest="1"
+                    HorizontalOptions="FillAndExpand" ScaleX="0" Grid.Row="1">
+                <BoxView.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="Transparent" Offset="0" />
+                        <GradientStop Color="White" Offset="0.5" />
+                        <GradientStop Color="Transparent" Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -14,17 +14,31 @@ namespace BlogTutorials.PageModels
             set => SetProperty(ref _radialGaugeRow, value);
         }
 
+        private SampleCardViewModel _animatedEntryRow;
+        public SampleCardViewModel AnimatedEntryRow
+        {
+            get => _animatedEntryRow;
+            set => SetProperty(ref _animatedEntryRow, value);
+        }
+
         private INavigationService _navigationService;
 
         public MainPageModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-            RadialGaugeRow = new SampleCardViewModel("Radial Gauge", "Our custom Radial Gauge View with multiple variants of attributes.", GoToRadialGaugePage); ;
+
+            RadialGaugeRow = new SampleCardViewModel("Radial Gauge",
+                "Our custom Radial Gauge View with multiple variants of attributes.",
+                GoToPage<RadialGaugePageModel>);
+
+            AnimatedEntryRow = new SampleCardViewModel("Animated Entry",
+                "We'll use Xamarin.Forms 5 Brushes and standard animations to create Entries that respond to their Focus events.",
+                GoToPage<AnimatedEntryPageModel>);
         }
 
-        private void GoToRadialGaugePage()
+        private void GoToPage<TPageModel>() where TPageModel : PageModelBase
         {
-            _navigationService.NavigateToAsync<RadialGaugePageModel>();
+            _navigationService.NavigateToAsync<TPageModel>();
         }
     }
 }
